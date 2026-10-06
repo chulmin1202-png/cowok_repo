@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지역 거점 동시 상영 기획안 · 이철민</title>
+<style>
+  :root{--wood:#8a4b2a;--wood2:#6b3519;--cream:#f4e9d0;--ink:#2b1a10;--amber:#ffb84d;--red:#d8432f}
+  *{box-sizing:border-box;margin:0}
+  body{min-height:100vh;display:grid;place-items:center;padding:90px 16px 40px;
+    background:radial-gradient(circle at 50% 30%,#3a2a22,#16100c);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink)}
+  .radio{position:relative;width:100%;max-width:780px;padding:28px;border-radius:32px;
+    background:linear-gradient(160deg,var(--wood),var(--wood2));
+    box-shadow:0 30px 60px #000a,inset 0 2px 0 #ffffff30,inset 0 -6px 0 #0004}
+  .radio::before{content:"";position:absolute;top:-80px;right:90px;width:6px;height:110px;border-radius:3px;
+    background:linear-gradient(90deg,#999,#eee,#888);transform:rotate(18deg);transform-origin:bottom}
+  .radio::after{content:"";position:absolute;top:-92px;right:62px;width:16px;height:16px;border-radius:50%;background:#ddd}
+  .face{background:var(--cream);border-radius:20px;padding:24px;box-shadow:inset 0 3px 8px #0003}
+  .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.2em;font-weight:700;color:var(--wood2)}
+  .onair{display:flex;gap:8px;align-items:center;color:var(--red)}
+  .onair i{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:blink 1.4s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  .dial{margin:16px 0 22px;padding:20px 22px 16px;border-radius:14px;background:linear-gradient(#2a1d14,#1a120c);
+    color:var(--amber);box-shadow:inset 0 0 20px #000}
+  .dial h1{font-size:clamp(20px,4vw,30px);line-height:1.4;text-shadow:0 0 12px #ffb84d88}
+  .scale{position:relative;margin-top:16px;height:26px;border-top:1px solid #ffb84d55;
+    background:repeating-linear-gradient(90deg,#ffb84d99 0 1px,transparent 1px 12px) top/100% 8px no-repeat}
+  .scale span{position:absolute;top:10px;font-size:11px;opacity:.7;transform:translateX(-50%)}
+  .needle{position:absolute;top:-30px;left:72%;width:2px;height:58px;background:var(--red);box-shadow:0 0 8px var(--red)}
+  .body{display:grid;grid-template-columns:200px 1fr;gap:24px}
+  .speaker{border-radius:16px;min-height:200px;background:#3b2417 radial-gradient(circle,#140c07 2.5px,transparent 3px) 0 0/12px 12px;box-shadow:inset 0 2px 6px #000}
+  .label{font-size:11px;letter-spacing:.2em;font-weight:700;color:var(--red);margin-bottom:6px}
+  .now{font-size:clamp(17px,2.6vw,20px);font-weight:700;line-height:1.5;padding-bottom:16px;border-bottom:2px dashed #8a4b2a55;margin-bottom:16px}
+  ol{list-style:none;padding:0;display:grid;gap:10px}
+  li{display:flex;gap:12px;align-items:flex-start;line-height:1.55;font-size:15px}
+  li b{flex:none;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:#2b1a10;color:var(--cream);
+    box-shadow:0 3px 0 #000;font-size:14px}
+  .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:16px}
+  .knobs{display:flex;gap:18px}
+  .knob{width:54px;height:54px;border-radius:50%;background:conic-gradient(#444,#bbb,#444,#bbb,#444);
+    box-shadow:0 4px 8px #0006;position:relative}
+  .knob::after{content:"";position:absolute;inset:6px;border-radius:50%;background:#2b2b2b}
+  .knob::before{content:"";position:absolute;z-index:1;left:50%;top:9px;width:3px;height:14px;background:var(--amber);transform:translateX(-50%)}
+  .plate{padding:10px 18px;border-radius:10px;background:linear-gradient(#e9d9a8,#c9b178);color:var(--ink);
+    font-weight:800;letter-spacing:.1em;box-shadow:0 2px 0 #0005}
+  .feet{display:flex;justify-content:space-between;padding:0 60px}
+  .feet i{width:60px;height:14px;background:#1b0f08;border-radius:0 0 10px 10px}
+  @media (max-width:600px){
+    .radio{padding:16px}.face{padding:16px}
+    .body{grid-template-columns:1fr}.speaker{min-height:90px}
+    .radio::before{right:50px}.radio::after{right:22px}
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="radio">
+    <div class="face">
+      <div class="top"><span>LOCAL FM · 기획안</span><span class="onair"><i></i>ON AIR</span></div>
+
+      <div class="dial">
+        <h1>서울까지 왕복 8시간을, 지역 거점 동시 상영으로 &ldquo;지방 사람들 행복&rdquo;</h1>
+        <div class="scale">
+          <span style="left:5%">88</span><span style="left:27%">92</span><span style="left:50%">96</span>
+          <span style="left:73%">100</span><span style="left:95%">108</span>
+          <div class="needle"></div>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="speaker" aria-hidden="true"></div>
+        <div>
+          <p class="label">NOW PLAYING · 한 줄 요약</p>
+          <p class="now">서울에 못 가는 지방 팬도 같은 시간에 같이 본다.</p>
+          <p class="label">PRESET · 근거</p>
+          <ol>
+            <li><b>1</b><span>painpoint를 두 개로 줄였다.</span></li>
+            <li><b>2</b><span>같은 시간과 분위기가 핵심이다. 5.1 채널 기법과 멀티플레이, 실시간 송출로 현장감과 분위기를 UP 시킬 것이다.</span></li>
+            <li><b>3</b><span>티켓은 2.0~2.5만 원대 (VR·4D 기준)</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="knobs" aria-hidden="true"><div class="knob"></div><div class="knob"></div></div>
+        <div class="plate">기획 · 이철민</div>
+      </div>
+    </div>
+  </section>
+  <div class="feet" aria-hidden="true"><i></i><i></i></div>
+</main>
+</body>
+</html>
